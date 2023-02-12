@@ -11,7 +11,13 @@ public class PalindromeDetector {
 
   }
 
-  private static boolean checkPalindrome(String arg) {
-    return true;
+  private static boolean checkPalindrome(String original) {
+    StringBuilder reverseStringBuilder = new StringBuilder();
+    int originalStringLength = original.length();
+    for (int i = (originalStringLength - 1); i >=0; i--) {
+      reverseStringBuilder.append(original.charAt(i));
+    }
+    return reverseStringBuilder.toString().equalsIgnoreCase(original);
   }
+
 }
